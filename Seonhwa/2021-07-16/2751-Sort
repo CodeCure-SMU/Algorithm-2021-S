@@ -1,0 +1,10 @@
+#Using functions
+import sys
+x=[]
+N = int(input())
+for i in range(N):
+    N = int(sys.stdin.readline())
+    x.append(N)
+x.sort()
+for x_list in x:
+    print(x_list)
