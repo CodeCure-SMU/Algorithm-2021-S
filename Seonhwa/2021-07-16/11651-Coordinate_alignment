@@ -1,0 +1,11 @@
+# fail...
+import sys
+
+x=[]
+N = int(input())
+for i in range(N):
+    x.append(sys.stdin.readline().split())
+x.sort(key=lambda a: (a[1], a[0]))
+
+for x_list in x: 
+    print(x_list[0], x_list[1])
