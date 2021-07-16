@@ -1,10 +1,9 @@
-# fail...
 import sys
 
 x=[]
 N = int(input())
 for i in range(N):
-    x.append(sys.stdin.readline().split())
+    x.append(list(map(int, sys.stdin.readline().split()))) # no string! -> range: "int"
 x.sort(key=lambda a: (a[1], a[0]))
 
 for x_list in x: 
