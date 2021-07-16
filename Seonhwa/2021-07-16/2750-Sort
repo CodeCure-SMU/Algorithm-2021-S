@@ -1,0 +1,12 @@
+x=[]
+N = int(input())
+for i in range(N):
+    x.append(int(input()))
+# bubble sort
+for i in range(N):
+    for j in range(N):
+        if x[i] < x[j]:
+            x[i], x[j] = x[j], x[i]
+
+for x_list in x:
+    print(x_list)
