@@ -1,0 +1,13 @@
+import sys
+s=[]
+Sm=[]
+n = int(input())
+
+s = list(map(int, sys.stdin.readline().split()))
+
+s.sort()
+for i in range(0, len(s), 2):
+    Sm.append(s[i]+s[len(s)-1-i])
+
+Sm.sort()
+print(Sm[0])
