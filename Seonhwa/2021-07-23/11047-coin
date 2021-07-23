@@ -1,0 +1,17 @@
+import sys
+
+N, K = sys.stdin.readline().split()
+K = int(K)
+A=[0]*int(N)
+
+for i in range(int(N)):
+    A[i] = int(sys.stdin.readline())
+
+Ai=K
+n=0
+A.reverse()
+for i in range(int(N)):
+    if A[i] <= Ai:
+        n = int(n + Ai/A[i])
+        Ai = Ai%A[i]
+print(n)
