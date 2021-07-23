@@ -1,0 +1,13 @@
+import sys
+
+P=[]
+N = int(input())
+Pi= [0] * N
+
+P = list(map(int, sys.stdin.readline().split()))
+P.sort()
+
+for i in range(N):
+    Pi[i] = sum(P[:i+1])
+
+print(sum(Pi))
