@@ -1,0 +1,15 @@
+import sys
+
+city_n = int(sys.stdin.readline())
+road = list(map(int, sys.stdin.readline().split()))
+price = list(map(int, sys.stdin.readline().split()))
+
+temp=price[0]
+min=0
+for i in range(city_n-1):
+    if price[i] > temp:
+        min = min + temp*road[i]
+    else: # price[i] 원소보다 작은 경우
+        min = min + price[i]*road[i]
+        temp = price[i]
+print(min)
