@@ -4,11 +4,11 @@
 #include <sstream>
 using namespace std;
 int main(void){
-    int cnt = 0,total = 0; 
+    long long cnt = 0,total = 0; 
     string str_dist, str_stas, buf;
     cin>>cnt;
-   vector<int> dist(cnt-1);
-   vector<int> stas(cnt);
+   vector<long long> dist(cnt-1);
+   vector<long long> stas(cnt);
    for (int i = 0; i < cnt - 1; i++)
 		cin >> dist[i];
 	
