@@ -1,0 +1,15 @@
+NOT_FIND = -1
+
+def fibo(n):
+    if mem[n] == NOT_FIND:
+        mem[n] = fibo(n-1)+fibo(n-2)
+    return mem[n] 
+
+n = int(input())
+
+mem = [-1 for i in range(46)] # n <= 45
+
+mem[0] = 0
+mem[1] = 1
+    
+print(fibo(n))
