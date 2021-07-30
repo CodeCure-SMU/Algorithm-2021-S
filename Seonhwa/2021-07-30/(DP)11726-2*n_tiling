@@ -1,0 +1,7 @@
+# It is similar to Fibonacci sequence.
+n = int(input())
+
+one, two = 0, 1
+for i in range(n+1):
+    one, two = (one+two)%10007, one%10007
+print(one)
