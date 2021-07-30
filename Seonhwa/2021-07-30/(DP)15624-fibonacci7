@@ -1,0 +1,6 @@
+n = int(input())
+
+one, two = 0, 1 # memory or timeout appears when using arrays.
+for i in range(n):
+    one, two = (one+two)%1000000007, one%1000000007
+print(one)
