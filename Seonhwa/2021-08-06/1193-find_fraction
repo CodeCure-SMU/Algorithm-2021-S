@@ -1,0 +1,21 @@
+X = int(input())
+
+line=1
+n_max=1
+while True:
+    if X == line:
+        den, num = 1, 1
+        break
+    line = line+1
+    n_max = line + n_max
+    if X <= n_max:
+        diff = n_max - X
+        if line%2 == 0:
+            den = diff + 1 # 분모
+            num = line - diff # 분자
+            break
+        else:
+            den = line - diff # 분모
+            num = diff + 1 # 분자
+            break
+print('%d/%d' %(num, den))
